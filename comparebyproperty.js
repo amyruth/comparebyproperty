@@ -1,4 +1,5 @@
 /*compare objects by property value*/
+'use strict';
 function compare(propertyName){
 	return function(object1,object2){
 		var val1 = object1[propertyName];
@@ -10,12 +11,12 @@ function compare(propertyName){
 		}else{
 			return 0;
 		}
-	}
+	};
 	
 }
 
 /*array of objects*/
-var stock =[{fruit:'banana', amt:20}, {fruit:'orange', amt: 10}, {fruit:'apple', amt: 11}, {fruit:'pear', amt:3}];
+var stock =[{fruit: 'lemon', amt: 15}, {fruit:'banana', amt:20}, {fruit:'pear', amt:3}, {fruit:'orange', amt: 10}, {fruit:'apple', amt: 2}, {fruit: 'blueberry', amt: 400}];
 
 stock.sort(compare('amt'));
 
